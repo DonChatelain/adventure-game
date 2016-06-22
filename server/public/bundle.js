@@ -31462,6 +31462,10 @@
 	  this.weaknessRanged = true;
 	};
 	
+	Monster.prototype.takeMeleeHit = function (dmg) {
+	  this.hp -= dmg * (this.weaknessMelee ? 1.3 : 1);
+	};
+	
 	module.exports = Monster;
 
 /***/ },
